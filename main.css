@@ -1,0 +1,231 @@
+.body{
+    background-color: #fafd86;
+    /* background-color: #6d28e2; */
+    /* background-color: #fdf497; */
+}
+
+.card{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: cyan; */
+
+}
+.card_container{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    border-radius: 10px;
+    /* transition: all 0.5s; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.7s;
+}
+
+.card_container:hover{
+    height: 250px;
+    width: 300px;
+}
+
+.circle{
+    border-radius: 20px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background-color: orange; */
+}
+
+.circle::before {
+    content: '';
+    /* background-color: blueviolet; */
+    background-color: #030313;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    clip-path: circle(120px at center);
+    transition: all 0.5s;
+
+}
+
+.card_container:hover .circle::before {
+    border-radius: 20px;
+    clip-path: circle(400px at center);
+}
+
+.math-pic {
+    /* border: 1px solid rgba(15, 15, 15, 0.43); */
+    /* background-color: blue; */
+    position: absolute;
+    transition: all 0.3S;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_container:hover .math-pic{
+    height: 100px;
+    width: 100px;
+    align-self: flex-start;
+    transform: translateY(-50px);
+    transition: all 0.03s linear;
+}
+
+.math-pic::after {
+    background-color: white;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    transition: all 0.03s;
+    z-index: -1;
+    display: none;
+    transition: all 1s linear;
+}
+
+.card_container:hover .math-pic::after{
+    display: inline-block;
+}
+
+.math-pic img {
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.1s;
+}
+
+.card_text-tittle{
+    position: absolute;
+    font-size: 2rem;
+    font-weight: lighter;
+    color: #ffffff;
+    display: none;
+    opacity: 0;
+    transition: all 1s;
+    transition-delay: 0.5s;
+    text-align: center;
+}
+
+.card_container:hover .card_text-tittle{
+    display: inline-block;
+    opacity: 1;
+    align-self: flex-start;
+    transform: translateY(30px);
+}
+
+.card_button{
+    color: #030313;
+    position: absolute;
+    display: none;
+    background-color:#f9f9f9;
+    /* background-color:#fafd86; */
+    border-radius: 10px;
+    width: 100px;
+    height: 40px; 
+    font-size: 0.9rem;
+}
+
+.card_container:hover .card_button{
+    display: flex;
+}
+
+.card_footer{
+    display: flex;
+    align-self: flex-end;
+    transform: translateY(-10px);
+    margin-bottom: 20px;
+    
+}
+
+.redes-sociales{
+    display: none;
+    
+}
+
+
+.card_container:hover .redes-sociales{
+    display: flex;
+    column-gap: 25px;
+}
+
+
+.red-social{
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 26px;
+    color: #fff;
+    border-radius: 50%;
+    outline: 2px solid #fff ;
+    transition-property:
+        outline-offset, outline-color,
+        background-color;
+    transition-duration: 0.25s;
+}
+
+.red-social:hover {
+    outline-offset: 4px;
+}
+
+.red-social:hover i {
+    animation: shake .25s;
+}
+
+.instagram:hover {
+    background-image: radial-gradient(circle at 30% 107%,
+            #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d6249f 60%,
+            #285AEB 90%);
+    outline-color: #a02d76;
+}
+
+.facebook:hover {
+    background-color: #1da1f2;
+    outline-color: #1da1f2;
+}
+
+.linkedin:hover {
+    background-color: #0077b5;
+    outline-color: #0077b5;
+}
+
+.github:hover {
+    background-color: #2ea44f;
+    outline-color: #2ea44f;
+}
+.youtube:hover {
+    background-color: #f00;
+    outline-color: #f00;
+}
+
+@keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
+    }
+}
+
+
+
